@@ -29,6 +29,8 @@ function incrementarPorUno(array) {
    return nuevoarray
 }
 
+//return array.map(elem => elem +1);
+
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
@@ -36,6 +38,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
    array[array.length]=elemento;
    return array;
 }
+
+//array.push(elemento);
+//return array;
 
 function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
@@ -54,6 +59,7 @@ function dePalabrasAFrase(palabras) {
    return palabras.join(" ");
 }
 
+
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
@@ -65,13 +71,25 @@ function arrayContiene(array, elemento) {
    }
    return false;
 }
+//return array.includes(elemento);
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
-
+   var suma= 0;
+   for(var num of arrayOfNums){
+      suma= suma + num;
+   }
+   return suma;
 }
+
+// var suma=0;
+//for(let i=0;i<arrayOfNums.length; i++){
+//   suma= suma+arrayOfNums[i];
+//}
+//return suma;
+//}
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
@@ -79,6 +97,11 @@ function promedioResultadosTest(resultadosTest) {
    // Tu código:
    return agregarNumeros (resultadosTest)/resultadosTest.length;
 }
+//  var suma= 0;
+//for(var num of resultadosTest){
+//  suma= suma + num;
+//}
+//return suma/resultadosTest.length ;
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
@@ -92,13 +115,15 @@ function numeroMasGrande(arrayOfNums) {
    }
    return maximo;
 }
+//Tambien se puede con forEach
 
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-   if(arguments.length < 1) return 0;
+   if(arguments.length === 0) return 0;
+   
    var total= 1;
    for (var i=0; i <arguments.length; i++){
       total = total*arguments [i];
@@ -111,7 +136,7 @@ function cuentoElementos(array) {
    // Tu código:
    let contador=0;
    for(let i=0; i<array.length; i++){
-      if(array[i]>19){
+      if(array[i]>18){
          contador ++
       }
    }
@@ -134,7 +159,7 @@ function empiezaConNueve(num) {
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
    let number= num.toString()
-   if(number.charAt(0)==="9"){
+   if(number[0]==="9"){
       return true
    }
    return false 
@@ -176,7 +201,11 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
-
+   const tablaDelSeis = []
+   for(let i=0; i <=10; i++){
+      tablaDelSeis.push(i*6)
+   }
+   return tablaDelSeis
 }
 
 function mayorACien(array) {
@@ -206,7 +235,7 @@ function breakStatement(num) {
    var array=[];
    var suma= num;
    for(var i=0; i<10; i++){
-      suma= suma +2;
+      suma= suma +2; //suma+=2
       if(suma===i) break;
       else{
          array.push(suma);
@@ -233,7 +262,7 @@ function continueStatement(num) {
       if( i === 5) continue;
       else{
       suma = suma +2;
-      array.push(suma);
+      array.push(suma);// array.push(num+=2)
       }
    }
    return array;
