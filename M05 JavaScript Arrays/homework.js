@@ -30,6 +30,12 @@ function incrementarPorUno(array) {
 }
 
 //return array.map(elem => elem +1);
+//otra forma:
+// for(var i = 0; i < array.length; i++){
+// array[i]= array[i]+1;
+//}
+// return array;
+//}
 
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
@@ -103,6 +109,16 @@ function promedioResultadosTest(resultadosTest) {
 //}
 //return suma/resultadosTest.length ;
 
+//let suma=0;
+//for (let i = 0; i< resultadosTest.length; i++) {
+// const element = resultadosTest [i];
+// suma += element;
+//}
+// let promedio = suma/resuldosTest.length;
+// return promedio;
+//}
+
+
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
@@ -165,6 +181,8 @@ function empiezaConNueve(num) {
    return false 
 }
 
+//if(num.toString().startswith("9"))
+
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
@@ -221,6 +239,9 @@ function mayorACien(array) {
    return nuevoArray;
 }
 
+//let newArray = array.filter((mayor) => mayor > 100);
+// return newArray
+
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
 -------------------------------------------------------------------------------------*/
@@ -235,7 +256,7 @@ function breakStatement(num) {
    var array=[];
    var suma= num;
    for(var i=0; i<10; i++){
-      suma= suma +2; //suma+=2
+      suma= suma +2; //suma+=2;
       if(suma===i) break;
       else{
          array.push(suma);
