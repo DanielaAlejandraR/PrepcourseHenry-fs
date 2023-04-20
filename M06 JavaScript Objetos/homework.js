@@ -7,13 +7,13 @@ function crearGato(nombre, edad) {
    // La propiedad "meow" será una función que retorne el string: "Meow!".
    // Retornar el objeto.
    // Tu código:
-   var obj={
+   var obj = {
       nombre: nombre,
       edad: edad,
       meow: function (){
          return "Meow!";
    }
-}
+};
 return obj;
 }
 
@@ -96,7 +96,8 @@ function verificarPassword(objetoUsuario, password) {
       return false;
    }
    }
-
+ 
+//return objetoUsuario.password === password 
 
 function actualizarPassword(objetoUsuario, nuevaPassword) {
    // Reemplaza la contrseña guardada en la propiedad "password" del "objetoUsuario".
@@ -127,6 +128,11 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    }
    return objetoMuchosUsuarios;
 }
+// for(let usuario of objetoMuchosUsuarios){
+//   nuevoUsuario.espremiun = true;
+// }
+// return objetoMuchosUsuarios;
+
 
 function sumarLikesDeUsuario(objetoUsuario) {
    // El parámetro "objetoUsuario" tiene una propiedad llamada "posts" que es un arreglo.
@@ -152,9 +158,9 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
-   objetoProducto.calcularPrecioDescuento = function(){
-      return this.precio - (this.precio * this.porcentejeDeDescuento);
-   }
+   objetoProducto.calcularPrecioDescuento = function (){
+      return this.precio - this.precio * this.porcentajeDeDescuento;
+   };
    return objetoProducto;
 }
 
