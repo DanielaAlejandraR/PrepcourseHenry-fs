@@ -56,6 +56,8 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
    return result;
 }
 
+// return objetoMisterioso.numeroMisterioso * 5;
+
 function eliminarPropiedad(objeto, propiedad) {
    // El parámetro "propiedad" es una propiedad del objeto que recibes.
    // Debes eliminarla del objeto y retornarlo finalmente.
@@ -85,6 +87,12 @@ function tienePropiedad(objeto, propiedad) {
       return false;
    }
 }
+
+// if(objeto.hasOwnProperty(propiedad)){}
+// return true;
+//   }else{
+//  return false;
+//  }
 
 function verificarPassword(objetoUsuario, password) {
    // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
@@ -146,6 +154,9 @@ function sumarLikesDeUsuario(objetoUsuario) {
    }
    return suma;
 }
+
+// suma += objetoUsuario.posts[i].likes;
+
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
    // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
