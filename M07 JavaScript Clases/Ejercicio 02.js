@@ -30,14 +30,15 @@ function crearInstanciaPersona(nombre, apellido, edad, domicilio) {
    const persona = new Persona(nombre, apellido, edad, domicilio);
   return persona;
 }
+// return new Persona(nombre, apellido, edad, domicilio);
 
 function agregarMetodo() {
    // La función agrega un método "datos" a la clase "Persona".
    // Este método toma la propiedad "nombre" y "edad", y devuelve el string:
    // Ejemplo: "Juan, 22 años".
    // Tu código:
-   Persona.protoype.datos = function() {
-      return this.nombre + ", " + this.edad + "  años ";
+   Persona.prototype.datos = function() {
+      return `${this.nombre}, ${this.edad} años`
     }
 }
 
