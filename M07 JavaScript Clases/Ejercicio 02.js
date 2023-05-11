@@ -30,6 +30,7 @@ function crearInstanciaPersona(nombre, apellido, edad, domicilio) {
    const persona = new Persona(nombre, apellido, edad, domicilio);
   return persona;
 }
+
 // return new Persona(nombre, apellido, edad, domicilio);
 
 function agregarMetodo() {
@@ -41,6 +42,8 @@ function agregarMetodo() {
       return `${this.nombre}, ${this.edad} años`
     }
 }
+
+//return this.nombre + ", " + this.edad + " años"
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {

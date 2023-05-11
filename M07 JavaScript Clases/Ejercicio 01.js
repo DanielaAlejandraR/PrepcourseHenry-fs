@@ -21,6 +21,18 @@ function crearUsuario() {
    }
    return Usuario
 }
+
+// function Usuario(usuario, nombre, email, password){
+//this.usuario = usuario;
+//this.nombre = nombre;
+//this.email = email;
+//this.password = password; 
+
+//this.saludar = function(){
+//return "Hola, mi nombre es " + this.nombre;
+//}
+// return Usuario;
+
  
 function agregarMetodoPrototype(Usuario) {
    // Agrega un método al prototipo de "Usuario".
@@ -45,6 +57,14 @@ function agregarStringInvertida() {
       return suma;
     }
     }
+
+    //String.prototype.reverse = function(){
+    //var palabra=[];
+    // for(var i = 0; i< this.length; i++){
+    // palabra.unshift(this[i]);
+    //}
+    // return palabra.join("")  
+
 
     //String.prototype.reverse = function(){
    // var resultado= this.split("").reverse().join("")
