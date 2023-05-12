@@ -7,6 +7,12 @@ function mayuscula(nombre) {
    // Tu código:
    return nombre[0].toUpperCase() + nombre.slice(1);
 }
+//OTRA FORMA SOLUCIÓN
+//let mayusName =""
+// for (let i=0; i<nombre.length; i++){
+// if (i=== 0) mayusName += nombre[i].toUpperCase()
+// else mayusName += nombre[i]
+// return mayusName
 
 function invocarCallback(cb) {
    // Invoca/ejecuta el callback `cb`.
@@ -29,26 +35,33 @@ function sumarArray(arrayOfNumbers, cb) {
    // Este resultado debes pasárselo como argumento al callback recibido.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
-   var arrayOfNumbers=[1,2,3,4,5]
+
    var suma= 0;
    for (var i=0; i< arrayOfNumbers.length; i++){
-      suma = suma+ arrayOfNumbers [i];
+      suma = suma+ arrayOfNumbers [i]; // suma += arrayOfNumbers [i];
    }
    cb(suma);
 }
+// let suma= arrayOfNumbers.reduce((acc, curr)) => acc + curr)
+// cb(suma);
 
 function forEach(array, cb) {
    // Recibes un arreglo y un callback.
    // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
    // Debes pasarle el elemento como argumento al callback.
    // Tu código:
-   array.forEach(function(el, index){
-      cb(el);
-   });
+
    for(var i =0; i< array.length; i++){
       cb(array[i]);
    }
 }
+//OTRA SOLUCION 
+// for(let arrayElement of array){
+// cb(arrayElement);
+// }
+
+// OTRA SOLUCION 
+// array.forEach(elem => cb(elem)); 
 
 function map(array, cb) {
    // Debes iterar sobre el arreglo, y cada elemento pasárselo como arguemento al callback.
@@ -60,19 +73,30 @@ function map(array, cb) {
     });
     return nuevoArray;
 }
+//return array.map( elem => cb(elem))
+
+//OTRA FORMA DE SOLUCION
+
+//const mapReturn =[]
+//for(let i=0; i<array.length; i++){
+// mapReturn.push(cb(array[i]))
+//]
+// return mapReturn; 
 
 function filter(arrayOfStrings) {
    // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
    var nuevoArray = [];
-  for(let i = 0; i<arrayOfStrings.length; i++) {
+  for(let i = 0; i<arrayOfStrings.length; i++) { // for(let arrayElement of arrayOfStrings)
     if(arrayOfStrings[i][0] === "a") {
       nuevoArray.push(arrayOfStrings[i])
     }
   }
   return nuevoArray;
 }
+
+// return arrayOfStrings.filter(elem => elem[0] = "a")
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
