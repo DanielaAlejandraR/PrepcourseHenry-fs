@@ -5,7 +5,9 @@ function mayuscula(nombre) {
    // Debe devolver el mismo nombre, pero con la primera letra en mayúscula.
    // [Ejemplo]: "mario" ----> "Mario".
    // Tu código:
-   return nombre[0].toUpperCase() + nombre.slice(1);
+   return nombre[0].toUpperCase() + nombre.slice(1); 
+   // toUpperCase convierte en Mayuscula 
+   // slice recorre el array o el string a partir del indice indicado 
 }
 //OTRA FORMA SOLUCIÓN
 //let mayusName =""
@@ -42,6 +44,7 @@ function sumarArray(arrayOfNumbers, cb) {
    }
    cb(suma);
 }
+
 // let suma= arrayOfNumbers.reduce((acc, curr)) => acc + curr)
 // cb(suma);
 
