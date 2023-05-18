@@ -31,7 +31,7 @@ function combinarNombres(nombre, apellido) {
   var combinado= nombre +" "+apellido;
    return combinado;
 }
-// return `${nombre} ${apellido}`
+// return `${nombre} ${apellido}`;
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:

@@ -150,13 +150,10 @@ function sumarLikesDeUsuario(objetoUsuario) {
    // Tu código:
    var suma=0;
    for( var i=0; i<objetoUsuario.posts.length; i++){
-      suma = suma + objetoUsuario.posts[i].likes;
+      suma = suma + objetoUsuario.posts[i].likes; // suma += objetoUsuario.posts[i].likes;
    }
    return suma;
 }
-
-// suma += objetoUsuario.posts[i].likes;
-
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
    // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".

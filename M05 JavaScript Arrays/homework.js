@@ -30,7 +30,8 @@ function incrementarPorUno(array) {
 }
 
 //return array.map(elem => elem +1);
-//otra forma:
+
+// OTRA FORMA
 // for(var i = 0; i < array.length; i++){
 // array[i]= array[i]+1;
 //}
