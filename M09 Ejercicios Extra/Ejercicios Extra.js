@@ -20,6 +20,13 @@ function deObjetoAarray(objeto) {
 //}
 // return mainArray; 
 
+//OTRA SOLUCIÓN
+//var array=[];
+//for(x in objeto){
+// array.push([x, objeto[x]]);
+//}
+// return array;
+
 function numberOfCharacters(string) {
    // La función recibe un string. Debes recorrerlo y retornar un objeto donde cada propiedad es una de las
    // letras del string, y su valor es la cantidad de veces que se repite en el string.
@@ -68,7 +75,7 @@ function asAmirror(frase) {
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
 
-   let palabras =frase.split(" ");// separamos cada palabra 
+   let palabras =frase.split(" ");// separamos cada palabra en partes de un array 
    let reverseWords = palabras.map((elem) => {
       let res  ="";
       for(let i=elem.length-1; i>=0; i--){
@@ -78,7 +85,7 @@ function asAmirror(frase) {
    });
    return reverseWords.join(" ")
 }
- //let palabras =frase.split(" "); --separamos cada palabra 
+ //let palabras =frase.split(" "); --separamos cada palabra por letras
  //let array=[]
  //nuevafrase.forEach(element) =>{
  // array.push(element.split("").reverse().join(""));
@@ -86,6 +93,15 @@ function asAmirror(frase) {
 //let string= array.join(" ");
 // return string;  
 // }
+
+//OTRA SOLUCION 
+//let arrayFrase= frase.split(" ") 
+// let fraseEspejo =[]
+// for( let i=0; i<arrayFrase.length; i++){
+//  let espejo = arrayFrase[i].split("").reverse().join("")
+// fraseEspejo.push(espejo)
+//} 
+//return fraseEspejo.join(" ")
 
 function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
@@ -111,8 +127,11 @@ function capicua(numero) {
   return "Es capicua";
 }
 
+//OTRA SOLUCION                        [1, 2, 3]
+//              Pasa numero a string  separa en array     une el string
 // let nuevonumero= numero.toString().split("").reverse().join("");
-// if(nuevonumero= numero){
+                                             // voltea el array
+// if(nuevonumero === numero){
 // return  "Es capicua";
 // else return "No es capicua";  
 //}
@@ -200,8 +219,6 @@ function buscoInterseccion(array1, array2) {
 // };
 // };
 // return resultado;
-
-
 
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
