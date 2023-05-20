@@ -107,34 +107,17 @@ function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
-   let arr = String(numero).split("");
-  let rigth = null;
-  let left = null;
-
-  if(arr.length % 2 === 0){
-   left = arr.slice(0, arr.length/2);
-   rigth = arr.slice(arr.length/2);
-  }
-  if(arr.length % 2 === 1){
-   left = arr.slice(0, arr.length -1/2);
-   rigth = arr.slice(arr.length +1 /2);
-  }
-  for(let i=0; i<arr.length; i++){
-   if(arr[i] !== arr[arr.length -1 -i]){
-      return "No es capicua";
-   }
-  }
-  return "Es capicua";
+  
+                                       [1, 2, 3]
+//              Pasa numero a string  separa en array     une el string
+ let nuevonumero= numero.toString().split("").reverse().join("");
+                                             // voltea el array
+ if(nuevonumero === numero){
+ return  "Es capicua";
+  }else return "No es capicua";  
+ 
 }
 
-//OTRA SOLUCION                        [1, 2, 3]
-//              Pasa numero a string  separa en array     une el string
-// let nuevonumero= numero.toString().split("").reverse().join("");
-                                             // voltea el array
-// if(nuevonumero === numero){
-// return  "Es capicua";
-// else return "No es capicua";  
-//}
 
 function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.

@@ -67,7 +67,7 @@ function saludo(idioma) {
    }
 }
 
-// switch(idiona){
+// switch(idioma){
 // case "aleman":
 //  return "Guten Tag!"; 
 // case "mandarin":
@@ -156,7 +156,7 @@ function operadoresLogicos(num1, num2, num3) {
    // Si num1 es mayor a num2 y a num3, y además es positivo, retornar ---> "Numero 1 es mayor y positivo".
    // Si alguno de los tres números es negativo, retornar ---> "Hay negativos".
    // Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
-   // Si todos los argumentos son cero, retornar ---> .
+   // Si todos los argumentos son cero, retornar ---> "Error"
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
 if(num1 >0 && num1>num2 && num1 >num3 ){
@@ -205,7 +205,8 @@ function tieneTresDigitos(num) {
    if (num > 99 && num< 1000) return true; 
    return false;
 }
-// if(num.tostring().length ===3)return true;
+//    Pasa numero a string
+// if(num.tostring().length === 3)return true;
 // else return false;
 
 

@@ -27,13 +27,12 @@ function crearUsuario() {
 //this.nombre = nombre;
 //this.email = email;
 //this.password = password; 
-
 //this.saludar = function(){
 //return "Hola, mi nombre es " + this.nombre;
 //}
 // return Usuario;
-
  
+
 function agregarMetodoPrototype(Usuario) {
    // Agrega un método al prototipo de "Usuario".
    // El método debe llamarse "saludar" y debe devolver el string "Hello World!".
